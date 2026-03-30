@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+<div class="podcast-bar">
+  <div class="card">🎙️ Spannend</div>
+  <div class="card">🌿 Rustig</div>
+  <div class="card">🎤 Interview</div>
+  <div class="card">😂 Comedy</div>
+</div>
+</header>
+
+<div class="player">
+    <h1>🎧 Podcast</h1>
+    <button onclick="nextLine()">▶️ Volgende zin</button>
+
+    <div id="transcript">
+      <p class="line active">🌲 (rustige bosgeluiden)</p>
+      <p class="line">[twijfelend] Ik liep door het bos...</p>
+      <p class="line">👣 (zachte voetstappen achter haar)</p>
+      <p class="line">[fluisterend] ...en ik hoorde iets achter me</p>
+      <p class="line">⚡ (spanning stijgt)</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

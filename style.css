@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player {
+  width: 400px;
+}
+
+.line {
+  opacity: 0.4;
+  margin: 10px 0;
+}
+
+.active {
+  opacity: 1;
+  font-size: 1.2em;
+}
+
+/* emoties */
+.line:nth-child(2) {
+  color: lightblue;
+}
+
+.line:nth-child(4) {
+  color: pink;
+  font-style: italic;
+}
+
+
+
+.podcast-bar {
+  display: flex;
+
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  min-width: 120px;
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
