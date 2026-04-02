@@ -1,20 +1,82 @@
+
+
 body {
   font-family: Arial, sans-serif;
-  background: #111;
+  background: #000000;
   color: white;
   display: flex;
+  align-items:center;
   justify-content: center;
-  align-items: center;
   height: 100vh;
+  display: grid;
+font-size: 1.2em;
+}
+header p {
+    justify-self: center;
+    font-size: 1.1em;
+}
+ h1 {
+    justify-self: center;
+ }
+
+
+
+.card:nth-last-of-type(4){
+    background-color: rgba(183, 43, 43, 0.764);
+    /* border: 3px solid rgba(255, 255, 255, 0.764); */
 }
 
-.player {
-  width: 400px;
+.card:nth-last-of-type(3){
+    background-color: rgba(64, 155, 61, 0.674);
+    border: none;
+}
+
+.card:nth-last-of-type(2){
+    background-color: rgba(90, 129, 202, 0.68);
+    border: none;
+}
+
+.card:nth-last-of-type(1){
+    background-color: rgba(238, 103, 231, 0.58);
+    border:none;
+}
+
+
+
+
+button{
+    padding-bottom: 2em;
+}
+
+
+.podcast-bar {
+    grid-area: 1/1;
+  gap: 1em;
+  display: flex;
+}
+
+
+.card {
+    grid-area: 1/1;
+    margin: 0;
+  min-width: 120px;
+  background:#282828;
+  color: white;
+  padding: 15px;
+  border-radius: 2em;
+  text-align: center;
+}
+
+
+.play { 
+    grid-area: 2/1;
+    justify-self: center;
+    align-self: center;
 }
 
 .line {
-  opacity: 0.4;
-  margin: 10px 0;
+color: #ffffff;
+  margin: 1em 0;
 }
 
 .active {
@@ -22,21 +84,119 @@ body {
   font-size: 1.2em;
 }
 
-/* emoties */
+
 .line:nth-child(2) {
   color: lightblue;
+
 }
 
 .line:nth-child(4) {
-  color: pink;
-  font-style: italic;
+  color: rgb(255, 181, 194);
+
+}
+
+button {
+    padding: 1em;
+    border-radius: 2em;
 }
 
 
 
+.tekstgrootte {
+display: grid;
+    background-color:#282828;
+
+  justify-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 1em;
+
+
+}
+
+
+
+/* 
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  transform: scale(0.8);
+  padding: 15px;
+}
+
+.card {
+  min-width: 120px;
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card.active {
+  background: #555;
+  border: 2px solid white;
+}
+
+/* CONTENT */
+.tekstgrootte {
+  padding: 10px;
+}
+
+.play{
+  padding-bottom: 20px;
+}
+
+/* TRANSCRIPT */
+.line {
+  opacity: 0.3;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.line.active {
+  opacity: 1;
+  font-size: 1.2em;
+  transform: scale(1.05);
+}
+
+/* LABELS */
+.label {
+  color: #b6a3a3;
+  font-size: 0.9em;
+} */
+
+.whisper {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.tension {
+  color: rgba(255, 111, 0, 0.848);
+  font-weight: bold;
+}
+
+
+#transcript {
+  transition: font-size 0.2s;
+  justify-content: center;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
 .podcast-bar {
   display: flex;
-
   overflow-x: auto;
   gap: 10px;
   padding: 10px;
@@ -44,9 +204,56 @@ body {
 
 .card {
   min-width: 120px;
-  background: #222;
+  background: #333;
   color: white;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  cursor: pointer;
 }
+
+.card:hover {
+  background: #00000088;
+}
+
+
+input[type="checkbox"] {
+display: none;
+
+}
+
+.darklight {
+ padding: 0.5em;
+ border: 1px solid rgb(255, 255, 255);
+ border-radius: 1em;
+}
+
+
+
+
+
+/* dark light button */
+
+html:has(input[type="checkbox"]:checked) body {
+    background-color: white;
+}
+
+html:has(input[type="checkbox"]:checked) header {
+color: black;
+}
+
+html:has(input[type="checkbox"]:checked) .line {
+color: black;
+}
+
+html:has(input[type="checkbox"]:checked) .tekstgrootte {
+background-color: #00000059 ;
+}
+
+html:has(input[type="checkbox"]:checked) .play {
+color: #000000 ;
+}
+
+html:has(input[type="checkbox"]:checked) .darklight {
+    border: 1px solid rgb(0, 0, 0);
+} 

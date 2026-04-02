@@ -6,28 +6,61 @@
     <title>Prototype</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+    
+
 <body>
-    <header>
-<div class="podcast-bar">
-  <div class="card">🎙️ Spannend</div>
-  <div class="card">🌿 Rustig</div>
-  <div class="card">🎤 Interview</div>
-  <div class="card">😂 Comedy</div>
-</div>
+
+<header>
+   <h1>SoundText</h1>
+<p>Podcasts die je kunt volgen zonder geluid</p>
+  <div class="podcast-bar">
+    <div class="card">Spannend</div>
+    <div class="card">Educatief</div>
+    <div class="card">Interview</div>
+    <div class="card">Comedy</div>
+  </div>
+
+    <p>Kies een genre</p>
+
+<label class="darklight">
+  <input type="checkbox">
+  Dark/light
+</label>
 </header>
 
-<div class="player">
-    <h1>🎧 Podcast</h1>
-    <button onclick="nextLine()">▶️ Volgende zin</button>
 
-    <div id="transcript">
-      <p class="line active">🌲 (rustige bosgeluiden)</p>
-      <p class="line">[twijfelend] Ik liep door het bos...</p>
-      <p class="line">👣 (zachte voetstappen achter haar)</p>
-      <p class="line">[fluisterend] ...en ik hoorde iets achter me</p>
-      <p class="line">⚡ (spanning stijgt)</p>
-    </div>
+
+  <div class="tekstgrootte"> 
+    <label>
+        Tekstgrootte 
+    <input type="range" min="14" max="30" value="18" id="fontSize">
+    </label>
+
+ <!-- snelheid -->
+<!-- <select>
+<option>snelheid</option>
+  <option>1x</option>
+  <option>2x </option>
+  <option>3x</option>
+</select> -->
+   
+  </div>  
+
+  
+
+<div class="play">
+    <h1>🎙️ Podcast</h1>
+
+  <div id="transcript">
+    <p class="line label active">[geluid] zachte ruis van bomen en bladeren</p>
+    <p class="line">"ik loop door het bos"</p>
+    <p class="line label">[geluid – zacht, dichtbij] voetstappen achter me</p>
+    <p class="line whisper">😨 "ik hoorde iets"</p>
+    <p class="line tension">[geluid] takken kraken bij elke stap die dichterbij komt</p>
   </div>
+</div>
+  
 
   <script src="script.js"></script>
 
