@@ -1,68 +1,116 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Prototype</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
 
 <body>
 
-<header>
-   <!-- <h1>SoundText</h1> -->
-<p>Podcasts die je kunt volgen zonder geluid</p>
-  <div class="podcast-bar">
-    <div class="card">Spannend</div>
-    <div class="card">Educatief</div>
-    <div class="card">Interview</div>
-    <div class="card">Comedy</div>
+
+ 
+
+  <div class="play">
+
+    <div class="podcast-header">
+
+  <img class="cover" src="img/coverpodcast.jpg" alt="Podcast cover">
+
+  <div class="info">
+    <h2>Productiviteit Podcast 🎙️</h2>
+    <p>Een chaotisch gesprek over focus</p>
+    <span class="duur">⏱ 18 min</span>
   </div>
 
-    <p>Kies een genre</p>
+</div>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+    <button onclick="toggleMode()" id="modeBtn">Zelf lezen</button>
+    <button onclick="toggleFont()" id="fontBtn">Monospace</button>
+    <button onclick="toggleExpressions()">Expressie</button>
+ 
+<input type="checkbox" id="emojiToggle">
+<label for="emojiToggle" class="emojiToggleBtn">Emoji’s</label>
 
 <label class="darklight">
-  <input type="checkbox">
-  Dark/light
+  <input type="checkbox" id="themeToggle">
+  Dark / light mode
 </label>
-</header>
 
+    <div id="transcript">
 
+      <p class="line speaker-mila active">
+        <span class="name mila">[Mila]</span> Welkom bij weer een nieuwe podcast!
+        <span class="emoji">😊</span>
+      </p>
 
-  <div class="tekstgrootte"> 
-    <label>
-        Tekstgrootte 
-    <input type="range" min="14" max="30" value="18" id="fontSize">
-    </label>
+      <p class="line speaker-ruben">
+        <span class="name ruben">[Ruben]</span> En ik ben Ruben. Ik heb net koffie gemorst op mijn toetsenbord
+      </p>
 
- <!-- snelheid -->
-<!-- <select>
-<option>snelheid</option>
-  <option>1x</option>
-  <option>2x </option>
-  <option>3x</option>
-</select> -->
-   
-  </div>  
+      <p class="line speaker-mila">
+        <span class="name mila">[Mila]</span> Vandaag praten we over productiviteit
+        <span class="emoji">😂</span>
+      </p>
 
-  
+      <p class="line speaker-ruben">
+        <span class="name ruben">[Ruben]</span> Ik begin vaak aan veel dingen tegelijk
+      </p>
 
-<div class="play">
-    <h1>🎙️ Podcast</h1>
+      <p class="line speaker-mila">
+        <span class="name mila">[Mila]</span> Hoeveel tabs heb je open?
+      </p>
 
-  <div id="transcript">
-    <p class="line label active">[geluid] zachte ruis van bomen en bladeren</p>
-    <p class="line">"ik loop door het bos"</p>
-    <p class="line label">[geluid – zacht, dichtbij] voetstappen achter me</p>
-    <p class="line whisper">😨 "ik hoorde iets"</p>
-    <p class="line tension">[geluid] takken kraken bij elke stap die dichterbij komt</p>
+      <p class="line speaker-ruben">
+        <span class="name ruben">[Ruben]</span> 47 tabbladen...
+      </p>
+
+      <!-- EXTRA CONTENT (ALLEEN SELF READ MODE) -->
+      <p class="line extra"> <span class="name mila">[Mila]</span> Dat klinkt best chaotisch. </p>
+      <p class="line extra"> <span class="name ruben">[Ruben]</span> Ik noem het liever “creatief overzicht”. </p>
+      <p class="line extra"> <span class="name mila">[Mila]</span> Ik maak soms een to-do lijst… en zet daar dan “to-do
+        lijst maken” op. </p>
+      <p class="line extra"> <span class="name ruben">[Ruben]</span> Slim eigenlijk. Dan kun je meteen één ding
+        afstrepen. </p>
+      <p class="line extra"> <span class="name mila">[Mila]</span> Soms lijkt het alsof iedereen alles perfect op orde
+        heeft. </p>
+      <p class="line extra"> <span class="name ruben">[Ruben]</span> Dat zie je vooral online. In het echt is iedereen
+        een beetje chaotisch. </p>
+      <p class="line extra"> <span class="name mila">[Mila]</span> Dus we zijn niet de enigen? </p>
+      <p class="line extra"> <span class="name ruben">[Ruben]</span> Zeker niet. </p>
+      <p class="line extra"> <span class="name mila">[Mila]</span> Dan houden we het gewoon bij georganiseerde chaos.
+      </p>
+      <p class="line extra"> <span class="name ruben">[Ruben]</span> Deal 😂 </p>
+
+    </div>
+
+    <div class="tekstgrootte">
+      <label>Tekstgrootte</label>
+      <input id="fontSize" type="range" min="14" max="28" step="1">
+    </div>
+
   </div>
+
+<div class="emojis">
+  <span>🎙️</span>
+  <span>😂</span>
+  <span>☕</span>
+  <span>🎧</span>
+  <span>✨</span>
+  <span>🔥</span>
+  <span>🎵</span>
+  <span>💬</span>
 </div>
-  
+
 
   <script src="script.js"></script>
-
 </body>
+
 </html>

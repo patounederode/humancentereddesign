@@ -1,215 +1,61 @@
-
+/* Basis */
 
 body {
-  font-family: Arial, sans-serif;
-  background: #000000;
-  color: white;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  height: 100vh;
+  margin: 0;
+
   display: grid;
-font-size: 1.2em;
-}
-header p {
-    justify-self: center;
-    font-size: 1.1em;
-}
- h1 {
-    justify-self: center;
- }
+  justify-content: center;
+  align-items: center;
 
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
 
-
-.card:nth-last-of-type(4){
-    background-color: rgba(183, 43, 43, 0.764);
-    /* border: 3px solid rgba(255, 255, 255, 0.764); */
-}
-
-.card:nth-last-of-type(3){
-    background-color: rgba(64, 155, 61, 0.674);
-    border: none;
-}
-
-.card:nth-last-of-type(2){
-    background-color: rgba(90, 129, 202, 0.68);
-    border: none;
-}
-
-.card:nth-last-of-type(1){
-    background-color: rgba(238, 103, 231, 0.58);
-    border:none;
+  background: #141414;
+  color: white;
 }
 
 
+/* Header */
 
+header p,
 
-button{
-    padding-bottom: 2em;
+h1 {
+  justify-self: center;
 }
 
+h2 {
+  padding-top: 2em;
+}
+
+/* Podcast layout */
+
+.play {
+  grid-area: 2/1;
+  justify-self: center;
+  align-self: center;
+
+  margin: auto;
+}
 
 .podcast-bar {
-    grid-area: 1/1;
-  gap: 1em;
+  grid-area: 1/1;
+
   display: flex;
+  gap: 1em;
 }
 
-
 .card {
-    grid-area: 1/1;
-    margin: 0;
+  grid-area: 1/1;
+
   min-width: 120px;
-  background:#282828;
-  color: white;
+  margin: 0;
   padding: 15px;
+
+  background: #282828;
+  color: white;
+
   border-radius: 2em;
   text-align: center;
-}
-
-
-.play { 
-    grid-area: 2/1;
-    justify-self: center;
-    align-self: center;
-}
-
-.line {
-color: #ffffff;
-  margin: 1em 0;
-}
-
-.active {
-  opacity: 1;
-  font-size: 1.2em;
-}
-
-
-.line:nth-child(2) {
-  color: lightblue;
-
-}
-
-.line:nth-child(4) {
-  color: rgb(255, 181, 194);
-
-}
-
-button {
-    padding: 1em;
-    border-radius: 2em;
-}
-
-
-
-.tekstgrootte {
-display: grid;
-    background-color:#282828;
-
-  justify-items: center;
-  gap: 1em;
-  padding: 1em;
-  border-radius: 1em;
-
-
-}
-
-
-
-/* 
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  margin: 0;
-}
-
-/* HEADER */
-header {
-  transform: scale(0.8);
-  padding: 15px;
-}
-
-.card {
-  min-width: 120px;
-  background: #333;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.card.active {
-  background: #555;
-  border: 2px solid white;
-}
-
-/* CONTENT */
-.tekstgrootte {
-  padding: 10px;
-}
-
-.play{
-  padding-bottom: 20px;
-}
-
-/* TRANSCRIPT */
-.line {
-  opacity: 0.3;
-  margin: 10px 0;
-  transition: 0.3s;
-}
-
-.line.active {
-  opacity: 1;
-  font-size: 1.2em;
-  transform: scale(1.05);
-}
-
-/* LABELS */
-.label {
-  color: #b6a3a3;
-  font-size: 0.9em;
-} */
-
-.whisper {
-  opacity: 0.7;
-  font-style: italic;
-}
-
-.tension {
-  color: rgba(255, 111, 0, 0.848);
-  font-weight: bold;
-}
-
-
-#transcript {
-  transition: font-size 0.2s;
-  justify-content: center;
-}
-
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: white;
-}
-
-.podcast-bar {
-  display: flex;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.card {
-  min-width: 120px;
-  background: #333;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -217,43 +63,383 @@ body {
 }
 
 
-input[type="checkbox"] {
-display: none;
+/* Buttons */
 
+button {
+  margin: 1em;
+  padding: 1em 1.5em;
+
+  border-radius: 2em;
+  border: none;
+
+  background: #282828;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background: #ffffff;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Tekstgrootte */
+
+.tekstgrootte {
+  display: grid;
+  justify-items: center;
+  gap: 1em;
+
+  padding: 1em;
+
+  background-color: #282828;
+  border-radius: 1em;
+}
+
+
+/* Transcript */
+#transcript { 
+  max-height: 100%;  
+  width: 100%;   
+  height: 100%;
+
+  padding: 20px;    
+  margin: 2em 0;
+
+  font-size: 1em;
+  line-height: 1.8;  
+
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+
+  transition: font-size 0.2s;
+}
+
+/* Lines */
+
+.line {
+  margin: 12px 0;
+  padding: 6px;
+
+  border-radius: 6px;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.line.active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+}
+
+
+/* Extra regels */
+
+.line.extra {
+  display: none;
+}
+
+#transcript.read .line.extra {
+  display: block;
+}
+
+
+/* Autoplay / zelf lezen */
+
+#transcript.auto .line.active {
+  background: rgba(189, 189, 189, 0.907);
+  padding: 3px;
+}
+
+#transcript.read .line {
+  background: none !important;
+  opacity: 1;
+}
+
+
+/* Sprekers */
+
+.mila {
+  color: #ffb6ea;
+}
+
+.ruben {
+  color: #a0d8ef;
+}
+
+
+/* Effecten */
+
+.whisper {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.last {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Dark / light toggle */
+
+html:has(#themeToggle:checked) body {
+  background-color: white;
 }
 
 .darklight {
- padding: 0.5em;
- border: 1px solid rgb(255, 255, 255);
- border-radius: 1em;
+  padding: 0.5em;
+
+  border: 1px solid white;
+  border-radius: 1em;
+}
+
+html:has(#themeToggle:checked) .line,
+html:has(#themeToggle:checked) .play {
+  color: black;
+}
+
+body.no-emojis .emojis span {
+  display: none;
+}
+
+
+/* Light mode */
+
+html:has(#themeToggle:checked) body {
+  background-color: white;
+}
+
+html:has(#themeToggle:checked) header,
+html:has(#themeToggle:checked) .line,
+html:has(#themeToggle:checked) .play {
+  color: black;
+}
+
+html:has(#themeToggle:checked) .tekstgrootte {
+  background-color: #00000059;
+}
+
+html:has(#themeToggle:checked) .darklight {
+  border: 1px solid black;
+}
+
+html:has(#themeToggle:checked) #transcript {
+  border: 1px solid rgba(6, 6, 6, 0.1);
+}
+
+html:has(#themeToggle:checked) #transcript.auto .line.active {
+  background: rgba(0, 0, 0, 0.089);
+}
+
+
+
+/* Monospace mode */
+
+body.mono,
+body.mono * {
+  font-family: monospace !important;
+}
+
+
+/* normale kleuren */
+.name.mila {
+  color: rgb(255, 140, 249);
+}
+
+.name.ruben {
+  color: rgb(0, 170, 255);
+}
+
+/* expressies uit*/
+.no-expressions .name {
+  color: inherit;
+}
+
+
+/* ====== Expressies ====== */
+
+
+.highlight {
+  color: #ffd166;
+  font-weight: bold;
+}
+
+
+.caps {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+
+.no-expressions .emoji {
+  display: none;
+}
+
+strong {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* slider onderaan vast in transcript */
+.tekstgrootte {
+  position: sticky;
+  bottom: 0;
+
+  margin-top: auto;
+
+  display: grid;
+  justify-items: center;
+  gap: 1em;
+
+  padding: 1em;
+
+  background-color: #282828;
+  border-radius: 1em;
+
+  z-index: 10;
+}
+
+.no-expressions .emoji {
+  display: none;
 }
 
 
 
 
 
-/* dark light button */
-
-html:has(input[type="checkbox"]:checked) body {
-    background-color: white;
+/* HEADER */
+.podcast-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-html:has(input[type="checkbox"]:checked) header {
-color: black;
+.cover {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-html:has(input[type="checkbox"]:checked) .line {
-color: black;
+.info h2 {
+  margin: 0;
 }
 
-html:has(input[type="checkbox"]:checked) .tekstgrootte {
-background-color: #00000059 ;
+.info p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-html:has(input[type="checkbox"]:checked) .play {
-color: #000000 ;
+.duur {
+  font-size: 12px;
+  opacity: 0.6;
 }
 
-html:has(input[type="checkbox"]:checked) .darklight {
-    border: 1px solid rgb(0, 0, 0);
-} 
+/* PROGRESS BAR */
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.5s;
+}
+
+
+.speaker-mila {
+  border-left: 3px solid pink;
+  padding-left: 10px;
+}
+
+.speaker-ruben {
+  border-left: 3px solid dodgerblue;
+  padding-left: 10px;
+}
+
+
+.active {
+  transform: scale(1.02);
+  transition: 0.3s;
+  background: rgba(255,255,255,0.1);
+}
+
+
+/* EXPRESSIES AAN  */
+body {
+  transition: background 0.4s ease;
+}
+
+/* EXPRESSIES UIT*/
+body.expressions {
+  background: #ffaaaa;
+}
+
+
+
+/* DARK MODE blijft donker */
+body.dark.no-expressions {
+  background: #111;
+}
+
+
+.emojis  span {
+  position: fixed;
+  font-size: 28px;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: move 8s linear infinite;
+}
+
+
+.emojis span:nth-child(1) { top: 10%; left: -10%; animation-delay: 0s; }
+.emojis span:nth-child(2) { top: 30%; left: -20%; animation-delay: 2s; font-size: 34px; }
+.emojis span:nth-child(3) { top: 50%; left: -15%; animation-delay: 1s; }
+.emojis span:nth-child(4) { top: 70%; left: -25%; animation-delay: 3s; font-size: 30px; }
+.emojis span:nth-child(5) { top: 20%; left: -30%; animation-delay: 4s; }
+.emojis span:nth-child(6) { top: 80%; left: -10%; animation-delay: 1.5s; }
+.emojis span:nth-child(7) { top: 40%; left: -35%; animation-delay: 2.5s; }
+.emojis span:nth-child(8) { top: 60%; left: -5%; animation-delay: 0.5s; }
+
+@keyframes move {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(120vw) translateY(-20vh);
+  }
+}
+
+/* standaard: emoji’s zichtbaar */
+.emojis span {
+  display: inline;
+}
+
+/* uit = verbergen */
+body.no-emojis .emojis span {
+  display: none;
+}
+

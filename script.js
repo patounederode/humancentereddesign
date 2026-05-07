@@ -1,42 +1,93 @@
-let current = 0;
 const lines = document.querySelectorAll(".line");
+const transcript = document.getElementById("transcript");
+const modeBtn = document.getElementById("modeBtn");
+const fontBtn = document.getElementById("fontBtn");
+const slider = document.getElementById("fontSize");
 
-function nextLine() {
-  lines[current].classList.remove("active");
-  current++;
+let current = 0;
+let interval = null;
+let autoPlay = true;
+let expressionsOn = true;
 
-  if (current >= lines.length) {
-    current = 0;
-  }
-
-  lines[current].classList.add("active");
+// ---------------- ACTIVE LINE ----------------
+function setActive(index) {
+  lines.forEach(line => line.classList.remove("active"));
+  lines[index].classList.add("active");
 }
 
+// ---------------- AUTOPLAY ----------------
+function startAuto() {
+  stopAuto();
 
-window.onload = function () {
+  interval = setInterval(() => {
+    current = (current + 1) % lines.length;
+    setActive(current);
+  }, 3000);
+}
 
-  let current = 0;
-  const lines = document.querySelectorAll(".line");
+function stopAuto() {
+  clearInterval(interval);
+}
 
-  // automatische transcript
-  setInterval(() => {
-    lines[current].classList.remove("active");
-    current++;
+// ---------------- MODE TOGGLE ----------------
+function toggleMode() {
+  autoPlay = !autoPlay;
 
-    if (current >= lines.length) {
-      current = 0;
-    }
+  if (autoPlay) {
+    modeBtn.textContent = "Zelf lezen";
+    transcript.classList.remove("read");
+    startAuto();
+  } else {
+    modeBtn.textContent = "Autoplay";
+    transcript.classList.add("read");
+    stopAuto();
+  }
+}
 
-    lines[current].classList.add("active");
-  }, 2000);
+// ---------------- FONT TOGGLE ----------------
+function toggleFont() {
+  document.body.classList.toggle("mono");
 
-  // tekstgrootte aanpassen
-  const slider = document.getElementById("fontSize");
-  const transcript = document.getElementById("transcript");
+  fontBtn.textContent = document.body.classList.contains("mono")
+    ? "Standaard font"
+    : "Monospace";
+}
 
-  slider.addEventListener("input", function(e) {
-    transcript.style.fontSize = e.target.value + "px";
-  });
+// ---------------- EXPRESSIES ----------------
+function toggleExpressions() {
+  expressionsOn = !expressionsOn;
+  document.body.classList.toggle("no-expressions", !expressionsOn);
+}
 
+// ---------------- FONT SIZE ----------------
+slider.addEventListener("input", () => {
+  transcript.style.fontSize = slider.value + "px";
+});
+
+// ---------------- START ----------------
+window.onload = () => {
+  setActive(current);
+  startAuto();
 };
 
+// DARK / LIGHT MODE
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark", themeToggle.checked);
+});
+
+// EMOJI TOGGLE
+const emojiToggle = document.getElementById("emojiToggle");
+
+emojiToggle.addEventListener("change", () => {
+  document.body.classList.toggle("no-emojis", !emojiToggle.checked);
+});
+
+
+const progressBar = document.getElementById("progressBar");
+
+setInterval(() => {
+  let percent = ((current + 1) / lines.length) * 100;
+  progressBar.style.width = percent + "%";
+}, 500);
