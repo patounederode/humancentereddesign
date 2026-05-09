@@ -6,7 +6,9 @@ Zijn tip was om meer gebruik te maken van beweging en animatie in plaats van all
 
 # 31 maart
 Testen met Darice
-Tijdens het testen kwam naar voren dat het belangrijk is ze zelf keuzes kan maken. Bijvoorbeeld in tekstgrootte, snelheid van de tekst of juist volledige tekst kunnen lezen.
+Tijdens het testen kwam naar voren dat het belangrijk is ze zelf keuzes kan maken. Bijvoorbeeld in tekstgrootte,
+Scherm­afbeelding 2026-05-09 om 17.08.59.png
+snelheid van de tekst of juist volledige tekst kunnen lezen.
 
 Ook vond Darice het fijn als emoties zichtbaar worden gemaakt met emoji’s tussen haakjes. Hierdoor wordt de toon van een gesprek duidelijker.
 
@@ -69,3 +71,19 @@ Omdat de website speciaal voor haar is, kon ik alles goed afstemmen op wat zij p
 Daardoor had ik soms al het gevoel dat bepaalde ideeën waarschijnlijk niet zouden werken voor haar. Toch heb ik geprobeerd om die dingen alsnog te testen (met feedback van iemand anders) zodat ik kon ontdekken wat wel of niet werkte.
 
 Ondanks dat ik een deel heb gemist doordat ik ziek was, heb ik toch geprobeerd extra testen en feedback te vragen.
+
+# Design Principles
+Study situation
+
+Ik heb gekeken hoe Darice podcasts gebruikt en gevraagd wat ze prettig vindt. Omdat ze doof is, is visuele informatie voor haar belangrijk. Zo kon ik leren wat nodig is, zoals ondertitels, transcripties en duidelijke visuele aanwijzingen bij audio.
+
+Ignore conventions
+
+Ik heb niet vastgehouden aan de standaard manier van een audioplayer maken. In plaats daarvan heb ik nieuwe ideeën geprobeerd, zoals kleuren en animaties gebruiken om te laten zien wat er gebeurt. Zo werkt de website op een manier die voor Darice fijn is, ook al is het anders dan normaal.
+
+Prioritise identity
+
+Het ontwerp is helemaal afgestemd op Darice. Bijvoorbeeld: grote, duidelijke letters, emojis om emoties te laten zien, en de mogelijkheid om de tekst groter of kleiner te maken. Zo voelt de website persoonlijk en makkelijk voor haar.
+
+Add nonsense,
+Om de website leuker te maken heb ik kleine speelse dingen toegevoegd, zoals gekleurde voortgangsbalken en animaties bij klikken. Het maakt de website leuk om te gebruiken, zonder dat het verwarrend wordt.
