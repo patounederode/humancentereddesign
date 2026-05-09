@@ -43,7 +43,7 @@ Deze week ga ik opnieuw testen met Darice. Ook wil ik aan het einde van de week 
 Wat heb ik vandaag gedaan?
 Ik heb twee extra functies toegevoegd:
 Een keuze tussen ‘zelf lezen’ met scrollfunctie of ‘autoplay’.
-De mogelijkheid om het font te veranderen.
+Extra knop toegevoegd zodat ze kan kiezen tussen fonts. 
 
 Het voorbeeld werkt met twee personen in één podcast. De namen staan tussen haakjes [] zodat duidelijk is wie spreekt. Ook heb ik beide personen een eigen kleur gegeven om het gesprek overzichtelijker te maken.
 
@@ -51,14 +51,13 @@ Het voorbeeld werkt met twee personen in één podcast. De namen staan tussen ha
 Voortgangsgesprek
 Besproken dat ik nog meer dingen wil toevoegen om te testen:
 
-Kleurgebruik in zinnen
-Capslock
-Dikgedrukte woorden
-Expressies aan of uit kunnen zetten
-Testen met een Visual Design docent
+- Capslock
+ - Dikgedrukte woorden/cursief
+- Expressies aan of uit kunnen zetten
+- Testen met een Visual Design docent
 
 # Do 7 mei
-Ik heb kleurgebruik in zinnen, capslock, dikgedrukte woorden en het aan- en uitzetten van expressies toegevoegd. Het testen met een docent lukte niet, daarom heb ik iemand anders gevraagd om feedback te geven.
+Ik heb kleurgebruik in zinnen, capslock, dikgedrukte woorden en het aan en uitzetten van expressies toegevoegd. Het testen met een docent lukte niet, daarom heb ik iemand anders gevraagd om feedback te geven.
 
 Uit deze feedback kwam naar voren dat het fijn is dat je de keuze hebt om de tekst aan te passen aan je eigen voorkeur. En ook dat duidelijkheid en niet te veel afleiding belangrijk zijn tijdens het luistern van de podcast en daarom belangrijk dat je kunt kiezen tussen expressie of juist niet.
 
